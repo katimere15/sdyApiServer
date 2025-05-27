@@ -1,13 +1,11 @@
-package com.spring.domain.login.controller;
+package com.spring.api.login.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import com.spring.domain.login.dto.LoginDto;
-import com.spring.domain.login.service.LoginService;
+import com.spring.api.login.service.LoginService;
+import com.spring.domain.entity.Users;
 
 import lombok.RequiredArgsConstructor;
-
-import java.util.List;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,7 +20,7 @@ public class LoginController {
     private final LoginService loginService;
 
     @PostMapping("/api/login")
-    public String postMethodName(@RequestBody LoginDto loginDto) {
+    public String postMethodName(@RequestBody Users loginDto) {
         
         String result = loginService.login(loginDto);
         return result;
