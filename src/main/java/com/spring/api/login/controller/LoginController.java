@@ -25,9 +25,8 @@ public class LoginController {
     public String postMethodName(@RequestBody LoginDto loginDto) {
         System.out.println("postMethodName called with: " + loginDto.getId() + ", " + loginDto.getPw());
 
-        String result = loginService.login(loginDto);
 
-        return result;
+        return loginService.login(loginDto);
     }
     
     
