@@ -20,6 +20,8 @@ public class RouterInterceptor implements HandlerInterceptor{
         // 요청을 가로채고 필요한 작업을 수행합니다.
         // 예: 인증 체크, 로깅 등
         System.out.println("요청! Request intercepted: " + request.getRequestURI());
+        
+        // GITLENS 테스트중입니다.
 
         // true를 반환하면 다음 인터셉터나 컨트롤러로 요청이 전달됩니다.
         // false를 반환하면 요청 처리가 중단됩니다.
