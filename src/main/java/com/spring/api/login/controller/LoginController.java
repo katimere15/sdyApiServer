@@ -19,11 +19,18 @@ public class LoginController {
     private final LoginService loginService;
 
     @PostMapping("/test")
-    public String postMethodName(@RequestBody LoginDto loginDto) {
-        System.out.println("postMethodName called with: " + loginDto.getId() + ", " + loginDto.getPw());
+    public String loginBtnMethod(@RequestBody LoginDto loginDto) {
 
 
         return loginService.login(loginDto);
+    }
+
+    
+    @PostMapping("/test2")
+    public String idCheckBtnMethod(@RequestBody LoginDto loginDto) {
+
+
+        return loginService.idCheck(loginDto);
     }
     
     

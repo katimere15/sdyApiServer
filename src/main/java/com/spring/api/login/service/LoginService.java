@@ -7,4 +7,6 @@ public interface LoginService {
     // For example, it can have methods for user authentication, session management, etc.
 
     String login(LoginDto loginDto);
+
+    String idCheck(LoginDto loginDto);
 }
